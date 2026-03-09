@@ -7,6 +7,7 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = [
             'title',
             'slug',
-            'description'
+            'description',
             'active',
         ]
+        extra_kwargs = {'slug': {'required': False}}
