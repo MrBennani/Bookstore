@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ligdntg$+8d9b&cs(+!cpr#xt65q(48lsw87xoufm8^$*7^%1g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'MrBannani.pythonanywhere.com ']
 
 
 # Application definition
@@ -156,4 +156,6 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = ['localhost', '127.0.01', 'MrBannani.pythonanywhere.com ']
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
