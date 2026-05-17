@@ -154,7 +154,7 @@ INTERNAL_IPS = [
 
 SECRET_KEY = 'foo'
 
-# SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
